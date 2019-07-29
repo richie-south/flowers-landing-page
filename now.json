@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "public": false,
+  "name": "plantr-landingpage",
+  "alias": "plantr.online",
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ]
+}
