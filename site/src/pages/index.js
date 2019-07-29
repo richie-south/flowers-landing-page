@@ -100,7 +100,7 @@ const TitleText = () => (
           Get plantr for Android
         </CallToActionLink>
       </CallToActionButton>
-      <CallToActionLink href="https://play.google.com/store/apps/details?id=com.richardsoderman.flowers"><CallToActionIcon src="icon-web-2.png" /></CallToActionLink>
+      <CallToActionLink href="https://play.google.com/store/apps/details?id=com.richardsoderman.flowers"><CallToActionIcon src="icon.png" /></CallToActionLink>
     </CallToActionContainer>
   </CenterTitleContainer>
 )
@@ -189,7 +189,7 @@ const ImageRow = styled.div`
 `
 
 const ScreenShots = styled.img`
-  width: 200px;
+  width: 100%;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   margin-right: 16px;
   height: 355px;
@@ -209,7 +209,6 @@ const Storybody = styled.div`
   line-height: 1.6;
   color: #797979;
   font-weight: 300;
-
 
   b {
     color: black;
@@ -271,11 +270,11 @@ const TitleSection = () => (
         </Storybody>
       </BodyText>
       <ImageRow>
-        <Image path="phone-today.png" />
-        <Image path="phone-watered.png" />
-        <Image path="phone-overview.png" />
-        <Image path="phone-details.png" />
-        <Image path="phone-create.png" />
+        <Image path="phone-today.jpg" />
+        <Image path="phone-water.jpg" />
+        <Image path="phone-overview.jpg" />
+        <Image path="phone-garden.jpg" />
+        <Image path="phone-add.jpg" />
       </ImageRow>
     </Section>
 
