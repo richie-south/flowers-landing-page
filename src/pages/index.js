@@ -1,6 +1,7 @@
 import React from "react"
 import '../styles/global.css'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 
 const CenterTitleContainer = styled.div`
   display: flex;
@@ -96,11 +97,11 @@ const TitleText = () => (
     <ShortDescription>Plant reminders, statisctics, journals and more. All in one app {'<'}3</ShortDescription>
     <CallToActionContainer>
       <CallToActionButton>
-        <CallToActionLink href="https://play.google.com/store/apps/details?id=com.richardsoderman.flowers">
+        <CallToActionLink href="https://play.google.com/store/apps/details?id=com.richardsoderman.flowers&ref=plantr.online">
           Get plantr for Android
         </CallToActionLink>
       </CallToActionButton>
-      <CallToActionLink href="https://play.google.com/store/apps/details?id=com.richardsoderman.flowers"><CallToActionIcon src="icon.png" /></CallToActionLink>
+      <CallToActionLink href="https://play.google.com/store/apps/details?id=com.richardsoderman.flowers&ref=plantr.online"><CallToActionIcon src="icon.png" /></CallToActionLink>
     </CallToActionContainer>
   </CenterTitleContainer>
 )
@@ -230,7 +231,32 @@ const Paragraf = styled.p`
 `
 
 const TitleSection = () => (
-  <div>
+  <React.Fragment>
+    <Helmet title="plantr - app" defer={false} >
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Plant reminders, statisctics, journals and more. All in one app" />
+      <meta name="subject" content="Promotion page" />
+      <title>Plantr - app</title>
+
+      <meta property="og:url" content="https://plantr.online/index.html" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Plantr - plant reminders" />
+      <meta property="og:image" content="https://palntr.online/icon-large.png" />
+      <meta property="og:image:alt" content="plantr app icon" />
+      <meta property="og:description" content="Plant reminders, statisctics, journals and more. All in one app" />
+      <meta property="og:site_name" content="palntr" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="article:author" content="richard söderman" />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content="@rick_9412" />
+      <meta name="twitter:url" content="https://plantr.online/index.html" />
+      <meta name="twitter:title" content="Plantr - plant reminders" />
+      <meta name="twitter:description" content="Plant reminders, statisctics, journals and more. All in one app" />
+      <meta name="twitter:image" content="https://palntr.online/icon-large.png" />
+      <meta name="twitter:image:alt" content="plantr app icon" />
+    </Helmet>
     <TopLeftCornerImage />
     <FirstSection>
       <TitleText />
@@ -248,7 +274,6 @@ const TitleSection = () => (
           Jake never water his plants so they die of dehydration! THAT'S LITERALLY MURDER!!
           Do you want to be like JAKE?!?!</Paragraf>
           <br />
-
           <b>ALSO</b>
           <br />
           <Paragraf>
@@ -279,7 +304,7 @@ const TitleSection = () => (
     </Section>
 
     <BottomLeftCornerImage />
-  </div>
+  </React.Fragment>
 )
 
 
