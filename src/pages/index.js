@@ -183,6 +183,7 @@ const Section = styled.div`
 const ImageRow = styled.div`
   display: flex;
   width: 80%;
+  justify-content: center;
   overflow-x: scroll;
   flex-direction: row;
   margin-right: 16px;
@@ -191,6 +192,7 @@ const ImageRow = styled.div`
 
 const ScreenShots = styled.img`
   width: 100%;
+  max-width: 200px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   margin-right: 16px;
   height: 355px;
