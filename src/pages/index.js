@@ -36,6 +36,7 @@ const ShortDescription = styled.p`
   font-size: 20px;
   color: #585858;
   font-weight: 300;
+  z-index: 1;
 `
 
 const CallToActionContainer = styled.div`
@@ -114,9 +115,18 @@ const CenterImage = styled.img`
   width: 360px;
 `
 
+const CenterImagePicture = styled.picture`
+  width: 360px;
+`
+
 const TitleImage = () => (
   <CenterImageContainer>
-    <CenterImage src={'header-screenshot.png'} alt="screenshot" />
+    <CenterImagePicture>
+      <source srcset={`phone-header.webp`} type="image/webp" />
+      <source srcset={`phone-header.png`} type="image/jpeg" />
+      <CenterImage src={'phone-header.png'} alt="screenshot" />
+    </CenterImagePicture>
+
   </CenterImageContainer>
 )
 
@@ -191,6 +201,13 @@ const ImageRow = styled.div`
 `
 
 const ScreenShots = styled.img`
+  max-width: 200px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-right: 16px;
+  height: 355px;
+`
+
+const PictureScreenShot = styled.picture`
   width: 100%;
   max-width: 200px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -199,7 +216,11 @@ const ScreenShots = styled.img`
 `
 
 const Image = ({ path }) => (
-  <ScreenShots src={path} />
+  <PictureScreenShot>
+    <source srcset={`${path}.webp`} type="image/webp" />
+    <source srcset={`${path}.jpg`} type="image/jpeg" />
+    <ScreenShots src={`${path}.jpg`} />
+  </PictureScreenShot>
 )
 
 const SubHeader = styled.h2`
@@ -297,11 +318,11 @@ const TitleSection = () => (
         </Storybody>
       </BodyText>
       <ImageRow>
-        <Image path="phone-today.jpg" />
-        <Image path="phone-water.jpg" />
-        <Image path="phone-overview.jpg" />
-        <Image path="phone-garden.jpg" />
-        <Image path="phone-add.jpg" />
+        <Image path="phone-today" />
+        <Image path="phone-water" />
+        <Image path="phone-overview" />
+        <Image path="phone-garden" />
+        <Image path="phone-add" />
       </ImageRow>
     </Section>
 
