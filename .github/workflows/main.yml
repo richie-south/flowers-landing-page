@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Performance Budgeting Regression Testing
+      uses: ModusCreateOrg/gimbal/action@master
+      env:
+        GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
