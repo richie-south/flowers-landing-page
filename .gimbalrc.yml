@@ -1,0 +1,8 @@
+audits:
+  - size
+  - lighthouse
+  - heap-snapshot
+  - unused-source
+
+configs:
+  buildDir: public
